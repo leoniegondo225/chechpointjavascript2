@@ -1,0 +1,95 @@
+function inverserChaine(chaine) {
+    return chaine.split('').reverse().join('');
+}
+
+// Exemple d'utilisation
+console.log(inverserChaine("Bonjour"));  // "ruojnoB"
+
+…………………………………………………………………......................................
+function compterCaracteres(chaine) {
+    return chaine.length;
+}
+
+// Exemple d'utilisation
+console.log(compterCaracteres("Bonjour"));  // 7
+
+……………………………………………………………………………………………………………………………..
+
+function mettreEnMajuscule(phrase) {
+    return phrase.split(' ').map(mot => mot.charAt(0).toUpperCase() + mot.slice(1)).join(' ');
+}
+
+// Exemple d'utilisation
+console.log(mettreEnMajuscule("bonjour tout le monde"));  // "Bonjour Tout Le Monde"
+
+
+tableau::::::::::::
+
+function trouverMaximum(tableau) {
+    return Math.max(...tableau);
+}
+
+// Exemple d'utilisation
+console.log(trouverMaximum([1, 2, 3, 4, 5]));  // 5
+……………………………………………………………………………………………………………………….
+
+function trouverMinimum(tableau) {
+    return Math.min(...tableau);
+}
+
+// Exemple d'utilisation
+console.log(trouverMinimum([1, 2, 3, 4, 5]));  // 1
+…………………………………………………………………………………………….
+
+function sommeTableau(tableau) {
+    return tableau.reduce((a, b) => a + b, 0);
+}
+
+// Exemple d'utilisation
+console.log(sommeTableau([1, 2, 3, 4, 5]));  // 15
+…………………………………………………………………………………….
+
+function filtrerTableau(tableau, condition) {
+    return tableau.filter(condition);
+}
+
+// Exemple d'utilisation : filtrer les nombres pairs
+console.log(filtrerTableau([1, 2, 3, 4, 5], n => n % 2 === 0));  // [2, 4]
+……………………………………………………………………………………………………………
+
+mathematique:::::::::::::::::::::::
+
+
+function factorielle(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorielle(n - 1);
+}
+
+// Exemple d'utilisation
+console.log(factorielle(5));  // 120
+…………………………………………………………………………………………………..
+
+function estPremier(n) {
+    if (n <= 1) return false;
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) return false;
+    }
+    return true;
+}
+
+// Exemple d'utilisation
+console.log(estPremier(7));  // true
+console.log(estPremier(4));  // false
+……………………………………………………………………………………………………….
+
+function fibonacci(n) {
+    let suite = [0, 1];
+    for (let i = 2; i < n; i++) {
+        suite.push(suite[i - 1] + suite[i - 2]);
+    }
+    return suite.slice(0, n);
+}
+
+// Exemple d'utilisation
+console.log(fibonacci(10));  // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+…………………………………………………………………………………….
